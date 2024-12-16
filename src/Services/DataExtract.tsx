@@ -3,13 +3,15 @@ import { ValuteDictionaryEntity, XmlEntity } from "../Models/ApiEntities";
 //возвращаем экземпляр ValuteDictionaryEntity
 export function ParseValuteDictionaryEntity(source: XmlEntity){
 
+    
+
    if(source.name != "Item") return undefined;
 
    if(source.attributes["ID"] == null ||source.attributes["ID"] == undefined)  return undefined;
 
    let objID = source.attributes["ID"];
 
-   console.log(source.attributes["ID"]);
+   //console.log(source.attributes["ID"]);
 
    let objName: string = "";
    let objEngName: string = "";
@@ -21,7 +23,7 @@ export function ParseValuteDictionaryEntity(source: XmlEntity){
 
    for (let index = 0; index < source.children.length; index++) {
 
-    console.log(source.children[index]);
+    //console.log(source.children[index]);
     
     if(source.children[index].name == "Name"){ objName = source.children[index].value; }
     if(source.children[index].attributes["EngName"] != null && source.children[index].attributes["EngName"] != undefined){ objEngName = source.children[index].attributes["EngName"]; }

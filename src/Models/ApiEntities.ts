@@ -1,3 +1,36 @@
+import XMLParser from 'react-xml-parser'
+
+export async function FetchXMLDoc(url: string){
+
+    const response = await fetch(url);
+    
+      const text = await response.body?.getReader().read().then(function processText({ done, value }) {
+
+        //console.log(value);
+  
+            //if(done){
+                let mir= new TextDecoder("windows-1251").decode(value);
+    
+                let xml : XmlEntity = new XMLParser().parseFromString(mir);
+
+                console.log(mir);
+
+                return xml
+            //}
+            return null;
+
+      });
+
+      if(text == undefined) return null;
+  
+       return text;
+
+
+
+}
+
+
+
 //XML Элемент
 export interface XmlEntity{
 
@@ -6,6 +39,8 @@ export interface XmlEntity{
     attributes: {[id: string]: string};
 
     children: XmlEntity[];
+
+    value: string;
 
 
 }
