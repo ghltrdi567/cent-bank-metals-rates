@@ -1,0 +1,158 @@
+<mxfile host="Electron" modified="2024-12-16T11:53:44.569Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.2.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="Gx4CdU77_mLvR8C3mHLb" version="24.2.5" type="device" pages="2">
+  <diagram name="Данные" id="uUf6EQs1kcrDvIb6dVV7">
+    <mxGraphModel dx="1434" dy="2125" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject label="http://www.cbr.ru/scripts/XML_daily.asp?date_req=02/03/2002" link="http://www.cbr.ru/scripts/XML_daily.asp?date_req=02/03/2002" id="xzMHXaP5jz5i9Grid5IY-1">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+            <mxGeometry x="60" y="50" width="260" height="60" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="xzMHXaP5jz5i9Grid5IY-3" value="Котировки на заданный день" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="85" y="-2" width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="xzMHXaP5jz5i9Grid5IY-4" value="http://www.cbr.ru/scripts/XML_val.asp?d=0&lt;div&gt;https://www.cbr.ru/scripts/XML_valFull.asp&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="390" y="50" width="250" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xzMHXaP5jz5i9Grid5IY-5" value="Справочник по валютам" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="440" y="-2" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="xzMHXaP5jz5i9Grid5IY-6" value="https://www.cbr.ru/scripts/XML_dynamic.asp?date_req1=02/03/2001&amp;amp;date_req2=14/03/2001&amp;amp;VAL_NM_RQ=R01235" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="760" y="50" width="430" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xzMHXaP5jz5i9Grid5IY-7" value="https://www.cbr.ru/scripts/XML_daily_eng.asp?date_req=01/01/2007&amp;amp;d=1" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="60" y="180" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xzMHXaP5jz5i9Grid5IY-8" value="На английском" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="125" y="128" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="xzMHXaP5jz5i9Grid5IY-9" value="Котировки валюты на определённы промежуток" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="820" y="-2" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="xzMHXaP5jz5i9Grid5IY-10" value="https://www.cbr.ru/scripts/xml_metall.asp?date_req1=01/07/2001&amp;amp;date_req2=13/07/2001" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1300" y="50" width="290" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xzMHXaP5jz5i9Grid5IY-12" value="Котировки на драг металлы на период" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1330" y="-2" width="240" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="xzMHXaP5jz5i9Grid5IY-13" value="https://www.cbr.ru/scripts/XMLCoinsBase.asp?date_req1=01/12/2005&amp;amp;date_req2=06/12/2005" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1750" y="50" width="320" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xzMHXaP5jz5i9Grid5IY-14" value="Отпускные цены на&amp;nbsp; инвестиционные монеты ЦБ" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1750" y="-12" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="xzMHXaP5jz5i9Grid5IY-15" value="https://www.cbr.ru/scripts/XML_ostat.asp?date_req1=01/06/2001&amp;amp;date_req2=05/06/2001" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="2200" y="50" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xzMHXaP5jz5i9Grid5IY-16" value="Остаток на корреспондентских счетах" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="2210" y="-12" width="240" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="xzMHXaP5jz5i9Grid5IY-17" value="https://www.cbr.ru/scripts/xml_mkr.asp?date_req1=01/07/2001&amp;amp;date_req2=13/07/2001" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="2630" y="50" width="290" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xzMHXaP5jz5i9Grid5IY-18" value="Динамика ставок межбансковского рынка" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="2650" y="-12" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="xzMHXaP5jz5i9Grid5IY-19" value="https://www.cbr.ru/scripts/xml_depo.asp?date_req1=01/07/2001&amp;amp;date_req2=13/07/2001" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="3060" y="50" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xzMHXaP5jz5i9Grid5IY-20" value="Динамика привлечения средств на депозиты" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="3060" y="-12" width="280" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="xzMHXaP5jz5i9Grid5IY-21" value="https://www.cbr.ru/scripts/XML_News.asp" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="3530" y="50" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xzMHXaP5jz5i9Grid5IY-22" value="Новости ЦБ" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="3605" y="-12" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="xzMHXaP5jz5i9Grid5IY-23" value="https://www.cbr.ru/scripts/XML_bic.asp?name=%D0%90%D0%92%D0%A2%D0%9E&amp;amp;bic=044525774" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="3970" y="50" width="360" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xzMHXaP5jz5i9Grid5IY-24" value="Соответствие названия кредитных организацийй кодам BIC" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="3975" y="-22" width="370" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="xzMHXaP5jz5i9Grid5IY-25" value="https://www.cbr.ru/scripts/xml_swap.asp?date_req1=01/12/2002&amp;amp;date_req2=06/12/2002" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="4610" y="50" width="320" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xzMHXaP5jz5i9Grid5IY-26" value="Динамика ставок валютного свопа" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="4650" y="-22" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="xzMHXaP5jz5i9Grid5IY-27" value="http://www.cbr.ru/ref/blacklist/BlackList.xml" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="5060" y="50" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xzMHXaP5jz5i9Grid5IY-28" value="Организации с признаками нелегальной деятельности" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="5010" y="-22" width="340" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bFNP1yM5KpawLlq80af2-1" value="Полный справочник валют" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="445" y="190" width="140" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="bFNP1yM5KpawLlq80af2-2" value="+ Name:&lt;br&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+ EngName:&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+ Nominal:&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;&lt;/span&gt;&amp;nbsp;&lt;span style=&quot;color: rgb(93, 176, 215); font-size: 13px; background-color: initial;&quot;&gt;&lt;font face=&quot;Helvetica&quot;&gt;ISO_Num_Code&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(93, 176, 215); font-size: 13px;&quot;&gt;&lt;font face=&quot;Helvetica&quot;&gt;ISO_Char_Code&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(93, 176, 215); font-size: 13px; background-color: initial;&quot;&gt;&lt;font face=&quot;Helvetica&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="bFNP1yM5KpawLlq80af2-1">
+          <mxGeometry y="26" width="140" height="264" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="T5sGq86BqeaeyEGFOS8b" name="Строение приложения">
+    <mxGraphModel dx="2261" dy="956" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="q4rcMVzP77rr_2FDtEov-1" value="основное приложение&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="30" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="q4rcMVzP77rr_2FDtEov-2" value="курсы валют на определённую дату" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="160" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="q4rcMVzP77rr_2FDtEov-3" value="Динамика курса валлюты" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="140" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="q4rcMVzP77rr_2FDtEov-4" value="Динамика цены драг металлов" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="140" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="viWOfbDzMb_GV3Swk_WH-1" value="Отпускные цены на инвест монеты" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="140" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="viWOfbDzMb_GV3Swk_WH-2" value="Справочник по валютам" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-40" y="50" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="viWOfbDzMb_GV3Swk_WH-3" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="q4rcMVzP77rr_2FDtEov-3" target="viWOfbDzMb_GV3Swk_WH-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-30" y="370" as="sourcePoint" />
+            <mxPoint x="20" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="viWOfbDzMb_GV3Swk_WH-4" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="q4rcMVzP77rr_2FDtEov-2" target="viWOfbDzMb_GV3Swk_WH-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-170" y="320" as="sourcePoint" />
+            <mxPoint x="-120" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="viWOfbDzMb_GV3Swk_WH-5" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="q4rcMVzP77rr_2FDtEov-1" target="viWOfbDzMb_GV3Swk_WH-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="360" y="470" as="sourcePoint" />
+            <mxPoint x="410" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="viWOfbDzMb_GV3Swk_WH-6" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="q4rcMVzP77rr_2FDtEov-1" target="q4rcMVzP77rr_2FDtEov-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="30" y="400" as="sourcePoint" />
+            <mxPoint x="80" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="viWOfbDzMb_GV3Swk_WH-7" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="q4rcMVzP77rr_2FDtEov-1" target="q4rcMVzP77rr_2FDtEov-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-100" y="350" as="sourcePoint" />
+            <mxPoint x="-50" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="viWOfbDzMb_GV3Swk_WH-8" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="q4rcMVzP77rr_2FDtEov-1" target="q4rcMVzP77rr_2FDtEov-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-130" y="310" as="sourcePoint" />
+            <mxPoint x="-80" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
