@@ -6,18 +6,15 @@ export async function FetchXMLDoc(url: string){
     
       const text = await response.body?.getReader().read().then(function processText({ done, value }) {
 
-        //console.log(value);
-  
-            //if(done){
+       
                 let mir= new TextDecoder("windows-1251").decode(value);
     
                 let xml : XmlEntity = new XMLParser().parseFromString(mir);
 
-                console.log(mir);
+                //console.log(mir);
 
                 return xml
-            //}
-            return null;
+           
 
       });
 

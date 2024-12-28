@@ -3,7 +3,7 @@ import { ValuteDictionaryEntity, XmlEntity } from "../Models/ApiEntities";
 //возвращаем экземпляр ValuteDictionaryEntity
 export function ParseValuteDictionaryEntity(source: XmlEntity){
 
-    
+    //console.log(source);
 
    if(source.name != "Item") return undefined;
 
@@ -24,12 +24,14 @@ export function ParseValuteDictionaryEntity(source: XmlEntity){
    for (let index = 0; index < source.children.length; index++) {
 
     //console.log(source.children[index]);
+
+
     
     if(source.children[index].name == "Name"){ objName = source.children[index].value; }
-    if(source.children[index].attributes["EngName"] != null && source.children[index].attributes["EngName"] != undefined){ objEngName = source.children[index].attributes["EngName"]; }
-    if(source.children[index].attributes["Nominal"] != null && source.children[index].attributes["Nominal"] != undefined){ objNominal = source.children[index].attributes["Nominal"]; }
-    if(source.children[index].attributes["ISO_Num_Code"] != null && source.children[index].attributes["ISO_Num_Code"] != undefined){ objUSONum = source.children[index].attributes["ISO_Num_Code"]; }
-    if(source.children[index].attributes["ISO_Char_Code"] != null && source.children[index].attributes["ISO_Char_Code"] != undefined){ objUSOChars = source.children[index].attributes["ISO_Char_Code"]; }
+    if(source.children[index].name == "EngName"){ objEngName = source.children[index].value; }
+    if(source.children[index].name == "Nominal"){ objNominal = source.children[index].value; }
+    if(source.children[index].name == "ISO_Num_Code"){ objUSONum = source.children[index].value; }
+    if(source.children[index].name == "ISO_Char_Code"){ objUSOChars = source.children[index].value; }
     
    }
 
