@@ -21,7 +21,7 @@ function App() {
 
     if(DictionaryValutes.DailyUpdate.length == 0){
 
-      //console.log("daily");
+      console.log("daily");
       getDailyValutesData();
     }
     else{
@@ -31,7 +31,7 @@ function App() {
 
     if(DictionaryValutes.MountlyUpdate.length == 0){
 
-      //console.log("mount");
+      console.log("mount");
       getMountlyValutesData();
     }
     else{
@@ -48,6 +48,7 @@ function App() {
 
     let xml : XmlEntity| null = await FetchXMLDoc("https://www.cbr.ru/scripts/XML_valFull.asp?d=0");   // Assume xmlText contains the example XML.
 
+    
     let newRes: ValuteDictionaryEntity[] = [];
 
     for (let index = 0; index < (xml?.children.length == undefined?0 :xml?.children.length); index++) {
@@ -56,17 +57,22 @@ function App() {
         
       let curr= ParseValuteDictionaryEntity(xml.children[index]);
 
+      
+
       if(curr != undefined) newRes.push(curr);
 
       }
       
     }
 
-    const olddata= DictionaryValutes;
 
-    olddata.DailyUpdate = newRes;
-    //console.log(olddata);
-    setDictionaryValutes(olddata);
+    
+
+    const NewData: ValuteDictionaryData = {DailyUpdate: newRes, MountlyUpdate: DictionaryValutes.MountlyUpdate}
+
+
+    
+    setDictionaryValutes(NewData);
   
   };
 
@@ -90,11 +96,13 @@ function App() {
       
     }
 
-    const olddata= DictionaryValutes;
 
-    olddata.MountlyUpdate = newRes;
-    //console.log(olddata);
-    setDictionaryValutes(olddata);
+    
+
+    const NewData: ValuteDictionaryData = {DailyUpdate: DictionaryValutes.DailyUpdate, MountlyUpdate: newRes}
+
+    
+    setDictionaryValutes(NewData);
   
   };
 
