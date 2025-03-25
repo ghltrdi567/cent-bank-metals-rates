@@ -64,4 +64,35 @@ export interface ValuteDictionaryEntity{
 
 }
 
+//курс валюты
+export interface ValuteRateEntity{
+
+    ID: string;
+
+    NumCode: string;
+
+    CharCode: string;
+
+    Nominal: string;
+
+    Name: string;
+
+    Value: string;
+
+    VunitRate: string;
+
+   
+}
+
+//курсы валют на день
+export interface ValuteRatesToDateEntity{
+
+    Date: string;
+
+    name: string;
+
+    Valutes: ValuteRateEntity[];
+   
+}
+
 

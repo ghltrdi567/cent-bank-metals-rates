@@ -27,3 +27,25 @@ export function ValuteFullDictionary(type: ValuteType){
     return "http://www.cbr.ru/scripts/XML_valFull.asp?d=" + typestr
 
 }
+
+export function ValuteRateToDate(type: ValuteType, dat:Date){
+
+    var dateStr:string = ControlNumberLendth(dat.getDate().toFixed(0), 2) + "/" + ControlNumberLendth(dat.getMonth().toFixed(0), 2) + "/" + ControlNumberLendth(dat.getFullYear().toFixed(0), 4)
+
+    var typestr =  type == ValuteType.DailyUpdate ? "0": "1";
+
+    return "http://www.cbr.ru/scripts/XML_daily.asp?date_req=" +dateStr+"&d=" + typestr
+
+}
+
+export function ControlNumberLendth(source: string, length: number){
+
+let result: string = source;
+
+while(result.length<length){
+
+    result = "0" + result;
+}
+return result;
+
+}

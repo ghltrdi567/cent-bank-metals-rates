@@ -17,17 +17,14 @@ export const DefaultValuteDictionaryData: ValuteDictionaryData = {DailyUpdate: [
 
 const ValuteDictionaryTabs = (props: {data: ValuteDictionaryData}) => {
 
-    const name  = (params:any)=> {
-        console.log(params);
-        return <></>
-    }
+    
 
   return (
-    <Tabs
+    <Tabs 
     defaultActiveKey="profile"
     id="ValuteDictionaryTabs"
     className="mb-3"
-  > {name(props.data.DailyUpdate) }
+  > 
     <Tab eventKey="home" title="Устанавливается ежедневно">
       <ValuteDictionaryTable Values={props.data.DailyUpdate}/>
     </Tab>

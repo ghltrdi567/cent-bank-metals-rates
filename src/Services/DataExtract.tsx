@@ -1,4 +1,4 @@
-import { ValuteDictionaryEntity, XmlEntity } from "../Models/ApiEntities";
+import { ValuteDictionaryEntity, ValuteRateEntity, XmlEntity } from "../Models/ApiEntities";
 
 //возвращаем экземпляр ValuteDictionaryEntity
 export function ParseValuteDictionaryEntity(source: XmlEntity){
@@ -36,6 +36,52 @@ export function ParseValuteDictionaryEntity(source: XmlEntity){
    }
 
    let result: ValuteDictionaryEntity = {ID: objID, Name: objName, EngName: objEngName, Nominal: objNominal, ISO_Num_Code: objUSONum, ISO_Char_Code: objUSOChars}
+
+   return result;
+
+
+}
+
+
+export function ParseValuteRateEntity(source: XmlEntity){
+
+    //console.log(source);
+
+   if(source.name != "Valute") return undefined;
+
+   if(source.attributes["ID"] == null ||source.attributes["ID"] == undefined)  return undefined;
+
+   let objID = source.attributes["ID"];
+
+   //console.log(source.attributes["ID"]);
+
+   let numCode: string = "";
+   let charCode: string = "";
+   let nominal: string = "";
+   let name: string = "";
+   let value: string = "";
+   let valueNunit: string = "";
+
+   
+
+   for (let index = 0; index < source.children.length; index++) {
+
+    //console.log(source.children[index]);
+
+
+    
+    if(source.children[index].name == "NumCode"){ numCode = source.children[index].value; }
+    if(source.children[index].name == "CharCode"){ charCode = source.children[index].value; }
+    if(source.children[index].name == "Nominal"){ nominal = source.children[index].value; }
+    if(source.children[index].name == "Name"){ name = source.children[index].value; }
+    if(source.children[index].name == "Value"){ value = source.children[index].value; }
+    if(source.children[index].name == "VunitRate"){ valueNunit = source.children[index].value; }
+    
+   }
+
+   let result: ValuteRateEntity = {ID: objID, NumCode:numCode, CharCode: charCode, Nominal: nominal, Name:name, Value: value, VunitRate: valueNunit}
+
+  
 
    return result;
 

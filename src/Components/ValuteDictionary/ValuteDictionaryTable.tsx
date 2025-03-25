@@ -10,8 +10,17 @@ export interface ValuteDictionaryTableProps{
 }
 
 const ValuteDictionaryTable = (props: ValuteDictionaryTableProps) => {
+
+  const tyu = function(){
+
+        console.log(props);
+         return <></>
+        }
+
+
   return (
     <Table striped bordered hover>
+         {tyu()}
         <thead>
             <tr>
             <th>#</th>
