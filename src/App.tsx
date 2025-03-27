@@ -9,6 +9,9 @@ import { ParseValuteDictionaryEntity, ParseValuteRateEntity } from './Services/D
 import ValuteDictionaryTabs, { DefaultValuteDictionaryData, ValuteDictionaryData } from './Components/ValuteDictionary/ValuteDictionaryTabs'
 import DailyValitesTabs, { ValuteRatesToDateData, defautValuteRatesToDateData } from './Components/DailyValutes/DailyValitesTabs'
 import { ValuteDictionary, ValuteFullDictionary, ValuteRateToDate, ValuteType } from './Services/ApiStrings'
+import DatePicker from './Components/DatePicker'
+import { ParseDateString } from './Services/Datavalidation'
+import DailyvalutesBar from './Components/DailyValutes/DailyvalutesBar'
 
 function App() {
   
@@ -17,29 +20,21 @@ function App() {
 
   const[DailyValutes, setDailyValutes] = useState<ValuteRatesToDateData>(defautValuteRatesToDateData);
 
+ 
+
   useEffect(() => {
 
-    if(DictionaryValutes.DailyUpdate.length == 0){
+    if(DictionaryValutes.DailyUpdate.length == 0 || DictionaryValutes.MountlyUpdate.length == 0){
 
       
-      getDailyValutesData();
-    }
-    else{
-
-      console.log("Загружена библиотека валют, курс которых обновляется ежедневно");
-    }
-
-    if(DictionaryValutes.MountlyUpdate.length == 0){
-
-      
-      getMountlyValutesData();
-    }
-    else{
-      console.log("Загружена библиотека валют, курс которых обновляется ежемесячно");
+      getValutesDuctionary();
+      console.log("Загружена библиотека валют");
     }
     
 
-    if(DailyValutes.DailyUpdate.length == 0){
+    
+    
+    /* if(DailyValutes.DailyUpdate.length == 0){
 
       getDailyValutesDataToDay(new Date(2007, 1, 1))
 
@@ -57,11 +52,11 @@ function App() {
     }
     else{
       console.log("Загружены курсы валют, курс которых обновляется ежемесячно");
-    }
+    } */
 
 
     
-  }, [ DictionaryValutes, DailyValutes]);
+  }, [DailyValutes]);
 
 
   const getDailyValutesData = async () => {
@@ -89,11 +84,7 @@ function App() {
 
     
 
-    const NewData: ValuteDictionaryData = {DailyUpdate: newRes, MountlyUpdate: DictionaryValutes.MountlyUpdate}
-
-
-    
-    setDictionaryValutes(NewData);
+    return newRes;
   
   };
 
@@ -118,10 +109,7 @@ function App() {
     }
 
 
-    const NewData: ValuteDictionaryData = {DailyUpdate: DictionaryValutes.DailyUpdate, MountlyUpdate: newRes}
-
-    
-    setDictionaryValutes(NewData);
+    return newRes;
   
   };
 
@@ -144,10 +132,7 @@ function App() {
       
     }
 
-    const NewData: ValuteRatesToDateData = {DailyUpdate: newRes, MountlyUpdate: DailyValutes.MountlyUpdate}
-    //console.log(NewData);
-
-    setDailyValutes(NewData);
+    return newRes;
 
   }
 
@@ -170,12 +155,58 @@ function App() {
       
     }
 
-    const NewData: ValuteRatesToDateData = {MountlyUpdate: newRes, DailyUpdate: DailyValutes.DailyUpdate}
-    //console.log(NewData);
-
-    setDailyValutes(NewData);
+    return newRes;
 
   }
+
+
+ const getValutesDuctionary = async () =>{
+
+  const DailyVals = await getDailyValutesData();
+
+  const MonthlyVals = await getMountlyValutesData();
+
+  const newDic : ValuteDictionaryData = {DailyUpdate: DailyVals, MountlyUpdate: MonthlyVals}
+
+  setDictionaryValutes(newDic);
+
+ }
+
+ const getValutesRateToDate = async (date: Date) =>{
+
+  const DailyVals = await getDailyValutesDataToDay(date);
+
+  const MonthlyVals = await getMonthlyValutesDataToDay(date);
+
+
+  const newvals : ValuteRatesToDateData = {DailyUpdate: DailyVals, MountlyUpdate: MonthlyVals}
+
+  setDailyValutes(newvals);
+
+ }
+
+
+  const DailyValutedateUpdated = (date: Date) =>{
+
+    
+
+    
+
+    getValutesRateToDate(date);
+    console.log("Загружены курсы валют на " + date);
+
+  }
+
+  const update =(source) =>{
+
+const ty = source.target.value;
+
+   const  currentDate =  ParseDateString(source.target.value);
+
+   if(currentDate != undefined) DailyValutedateUpdated(currentDate);
+
+  }
+
 
   return (
     <>
@@ -184,7 +215,11 @@ function App() {
 
       {/* <ValuteDictionaryTabs data={DictionaryValutes}/> */}
 
-      <DailyValitesTabs data={DailyValutes}/>
+      
+
+      <DailyvalutesBar dateChanged={update} valutes={DailyValutes}/>
+
+      
 
     
     </>

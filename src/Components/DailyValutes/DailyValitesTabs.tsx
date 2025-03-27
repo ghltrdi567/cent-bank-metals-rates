@@ -26,7 +26,7 @@ const DailyValitesTabs = (props: {data: ValuteRatesToDateData}) => {
       <DailyValuteTable Values={ props.data.DailyUpdate}/>
     </Tab>
     
-    <Tab eventKey="monthly" title="Устанавливается ежемесячно">
+    <Tab eventKey="monthly" title="Устанавливается ежемесячно (до 31.01.2010)">
     <DailyValuteTable Values={ props.data.MountlyUpdate}/>
     </Tab>
   </Tabs>

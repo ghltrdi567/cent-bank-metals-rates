@@ -30,7 +30,9 @@ export function ValuteFullDictionary(type: ValuteType){
 
 export function ValuteRateToDate(type: ValuteType, dat:Date){
 
-    var dateStr:string = ControlNumberLendth(dat.getDate().toFixed(0), 2) + "/" + ControlNumberLendth(dat.getMonth().toFixed(0), 2) + "/" + ControlNumberLendth(dat.getFullYear().toFixed(0), 4)
+    
+
+    var dateStr:string = ControlNumberLendth(dat.getDate().toFixed(0), 2) + "/" + ControlNumberLendth((dat.getMonth()+1).toFixed(0), 2) + "/" + ControlNumberLendth(dat.getFullYear().toFixed(0), 4)
 
     var typestr =  type == ValuteType.DailyUpdate ? "0": "1";
 
