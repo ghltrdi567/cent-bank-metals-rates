@@ -95,4 +95,33 @@ export interface ValuteRatesToDateEntity{
    
 }
 
+//курс валюты в день
+export interface DynamicValuteRate{
+
+    Date: string;
+
+    Id: string;
+
+    Nominal: string;
+
+    Value: string;
+
+    ValuePUnit: string;
+
+
+}
+
+export interface DynamicValuteRates{
+
+    ID: string;
+
+    DateRange1: string;
+
+    DateRange2: string;
+
+    Rates: DynamicValuteRate[];
+
+
+}
+
 

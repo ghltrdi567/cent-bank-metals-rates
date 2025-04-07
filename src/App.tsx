@@ -12,6 +12,7 @@ import { ValuteDictionary, ValuteFullDictionary, ValuteRateToDate, ValuteType } 
 import DatePicker from './Components/DatePicker'
 import { ParseDateString } from './Services/Datavalidation'
 import DailyvalutesBar from './Components/DailyValutes/DailyvalutesBar'
+import DynamicValutesRatesBar from './Components/DynamicValuteRates/DynamicValutesRatesBar'
 
 function App() {
   
@@ -199,7 +200,7 @@ function App() {
 
   const update =(source) =>{
 
-const ty = source.target.value;
+  const ty = source.target.value;
 
    const  currentDate =  ParseDateString(source.target.value);
 
@@ -217,9 +218,10 @@ const ty = source.target.value;
 
       
 
-      <DailyvalutesBar dateChanged={update} valutes={DailyValutes}/>
+    {/* <DailyvalutesBar dateChanged={update} valutes={DailyValutes}/> */}
 
       
+      <DynamicValutesRatesBar Valutes={DictionaryValutes}/>
 
     
     </>
