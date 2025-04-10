@@ -5,19 +5,23 @@ type Props = {
 
 values: string[],
 
+placeholder: string,
+
 Changed
 
 }
 
 const Select = (props: Props) => {
   return (
-    <Form.Select onChange={props.Changed}>
+    <Form.Select defaultValue={props.placeholder} onChange={props.Changed}>
+
+   <option disabled >{props.placeholder}</option>
 
     {Object.entries(props.values ?? {}).map(([key, value])=>{
 
     return (
 
-        <option key={key}>{value}</option>
+      <option key={key}>{value}</option>
 
     );
 

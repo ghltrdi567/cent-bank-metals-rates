@@ -6,6 +6,8 @@ import Select from '../Select';
 import { Col, Container, InputGroup, Row } from 'react-bootstrap';
 import { DynamicValuteRate, FetchXMLDoc, XmlEntity } from '../../Models/ApiEntities';
 import { DynamicValutesURL } from '../../Services/ApiStrings';
+import { ParseDynamicValuteRateEntity, ParseValuteRateEntity } from '../../Services/DataExtract';
+import DynamicValutesRatesTable from './DynamicValutesRatesTable';
 
 type Props = {
 
@@ -28,7 +30,7 @@ const DynamicValutesRatesBar = (props: Props) => {
 
      if(Fromdate !=undefined && Todate !=undefined && ValuteID != undefined && ValuteID.length!=0){
 
-      
+      GetDynamicValutes();
 
 
 
@@ -50,7 +52,7 @@ const DynamicValutesRatesBar = (props: Props) => {
 
       if(currentDate != undefined) setFromdate(currentDate);
 
-      //console.log(currentDate);
+      console.log(currentDate);
     }
 
     const ToDateChanged =(source)=>{
@@ -58,7 +60,7 @@ const DynamicValutesRatesBar = (props: Props) => {
       const  currentDate =  ParseDateString(source.target.value);
 
       if(currentDate != undefined) setTodate(currentDate);
-      //console.log(currentDate);
+      console.log(currentDate);
     }
 
     const ValuteChoosen =(source)=>{
@@ -71,7 +73,7 @@ const DynamicValutesRatesBar = (props: Props) => {
 
         if(newId != undefined) setValuteID(newId);
 
-
+        console.log(newId);
       } 
     }
 
@@ -114,10 +116,25 @@ const DynamicValutesRatesBar = (props: Props) => {
 
       let xml : XmlEntity| null = await FetchXMLDoc(DynamicValutesURL(ValuteID, Fromdate ?? new Date(), Todate?? new Date()));
 
-      let newRes: DynamicValuteRate[]
+      
+      let newRes: DynamicValuteRate[] = [];
 
+      for (let index = 0; index < (xml?.children.length == undefined?0 :xml?.children.length); index++) {
 
+        if(xml != null) {
+          
+        let curr= ParseDynamicValuteRateEntity(xml.children[index]);
+  
+        
+  
+        if(curr != undefined) newRes.push(curr);
+  
+        }
+        
+      }
 
+      setDynamicValutes(newRes);
+      console.log(newRes);
     }
 
 
@@ -147,7 +164,16 @@ const DynamicValutesRatesBar = (props: Props) => {
         <Row className='mt-3'>
 
         <Col sm>
-        <Select values={GetValutesList(props.Valutes)} Changed={ValuteChoosen}></Select>
+        <Select  placeholder='Выберите валюту:' values={GetValutesList(props.Valutes)} Changed={ValuteChoosen}></Select>
+          </Col>
+
+
+        </Row>
+
+        <Row className='mt-3'>
+
+        <Col sm>
+        <DynamicValutesRatesTable Rates={DynamicValutes} />
           </Col>
 
 

@@ -98,13 +98,13 @@ export function ParseDynamicValuteRateEntity(source: XmlEntity){
    if(source.attributes["Id"] == null ||source.attributes["Id"] == undefined)  return undefined;
 
    let objID = source.attributes["ID"];
+   let objDate = source.attributes["Date"];
 
    //console.log(source.attributes["ID"]);
 
-   let numCode: string = "";
-   let charCode: string = "";
+   
+   
    let nominal: string = "";
-   let name: string = "";
    let value: string = "";
    let valueNunit: string = "";
 
@@ -116,16 +116,14 @@ export function ParseDynamicValuteRateEntity(source: XmlEntity){
 
 
     
-    if(source.children[index].name == "NumCode"){ numCode = source.children[index].value; }
-    if(source.children[index].name == "CharCode"){ charCode = source.children[index].value; }
+    
     if(source.children[index].name == "Nominal"){ nominal = source.children[index].value; }
-    if(source.children[index].name == "Name"){ name = source.children[index].value; }
     if(source.children[index].name == "Value"){ value = source.children[index].value; }
     if(source.children[index].name == "VunitRate"){ valueNunit = source.children[index].value; }
     
    }
 
-   let result: DynamicValuteRate = {}
+   let result: DynamicValuteRate = {Date: objDate, Id: objID, Nominal: nominal, Value: value, ValuePUnit: valueNunit }
   
 
    return result;

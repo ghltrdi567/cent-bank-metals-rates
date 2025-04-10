@@ -20,7 +20,7 @@ const ValuteDictionaryTable = (props: ValuteDictionaryTableProps) => {
 
   return (
     <Table striped bordered hover>
-         {tyu()}
+        {/*  {tyu()} */}
         <thead>
             <tr>
             <th>#</th>
