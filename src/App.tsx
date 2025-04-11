@@ -19,9 +19,7 @@ function App() {
 
   const[DictionaryValutes, setDictionaryValutes] = useState<ValuteDictionaryData>(DefaultValuteDictionaryData);
 
-  const[DailyValutes, setDailyValutes] = useState<ValuteRatesToDateData>(defautValuteRatesToDateData);
-
- 
+  
 
   useEffect(() => {
 
@@ -34,30 +32,7 @@ function App() {
     
 
     
-    
-    /* if(DailyValutes.DailyUpdate.length == 0){
-
-      getDailyValutesDataToDay(new Date(2007, 1, 1))
-
-
-    }
-    else{
-      console.log("Загружены курсы валют, курс которых обновляется ежедневно");
-    }
-
-    if(DailyValutes.MountlyUpdate.length == 0){
-
-      getMonthlyValutesDataToDay(new Date(2007, 1, 1))
-
-
-    }
-    else{
-      console.log("Загружены курсы валют, курс которых обновляется ежемесячно");
-    } */
-
-
-    
-  }, [DailyValutes]);
+  }, []);
 
 
   const getDailyValutesData = async () => {
@@ -114,52 +89,7 @@ function App() {
   
   };
 
-  const getDailyValutesDataToDay = async (date: Date) =>{
-
-    let xml : XmlEntity| null = await FetchXMLDoc(ValuteRateToDate(ValuteType.DailyUpdate, date));
-
-    let newRes: ValuteRateEntity[] = [];
-
-
-    for (let index = 0; index < (xml?.children.length == undefined?0 :xml?.children.length); index++) {
-
-      if(xml != null) {
-        
-      let curr= ParseValuteRateEntity(xml.children[index]);
-
-      if(curr != undefined) newRes.push(curr);
-
-      }
-      
-    }
-
-    return newRes;
-
-  }
-
-  const getMonthlyValutesDataToDay = async (date: Date) =>{
-
-    let xml : XmlEntity| null = await FetchXMLDoc(ValuteRateToDate(ValuteType.MounthUpdate, date));
-
-    let newRes: ValuteRateEntity[] = [];
-
-
-    for (let index = 0; index < (xml?.children.length == undefined?0 :xml?.children.length); index++) {
-
-      if(xml != null) {
-        
-      let curr= ParseValuteRateEntity(xml.children[index]);
-
-      if(curr != undefined) newRes.push(curr);
-
-      }
-      
-    }
-
-    return newRes;
-
-  }
-
+  
 
  const getValutesDuctionary = async () =>{
 
@@ -173,41 +103,9 @@ function App() {
 
  }
 
- const getValutesRateToDate = async (date: Date) =>{
+ 
 
-  const DailyVals = await getDailyValutesDataToDay(date);
-
-  const MonthlyVals = await getMonthlyValutesDataToDay(date);
-
-
-  const newvals : ValuteRatesToDateData = {DailyUpdate: DailyVals, MountlyUpdate: MonthlyVals}
-
-  setDailyValutes(newvals);
-
- }
-
-
-  const DailyValutedateUpdated = (date: Date) =>{
-
-    
-
-    
-
-    getValutesRateToDate(date);
-    console.log("Загружены курсы валют на " + date);
-
-  }
-
-  const update =(source) =>{
-
-  const ty = source.target.value;
-
-   const  currentDate =  ParseDateString(source.target.value);
-
-   if(currentDate != undefined) DailyValutedateUpdated(currentDate);
-
-  }
-
+  
 
   return (
     <>
@@ -218,10 +116,10 @@ function App() {
 
       
 
-    {/* <DailyvalutesBar dateChanged={update} valutes={DailyValutes}/> */}
+    <DailyvalutesBar/>
 
       
-      <DynamicValutesRatesBar Valutes={DictionaryValutes}/>
+      {/* <DynamicValutesRatesBar Valutes={DictionaryValutes}/> */}
 
     
     </>
