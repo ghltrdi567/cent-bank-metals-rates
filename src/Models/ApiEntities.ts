@@ -111,7 +111,7 @@ export interface DynamicValuteRate{
 
 }
 
-export interface DynamicValuteRates{
+/* export interface DynamicValuteRates{
 
     ID: string;
 
@@ -122,6 +122,18 @@ export interface DynamicValuteRates{
     Rates: DynamicValuteRate[];
 
 
+} */
+
+
+export interface DynamicMetalRate{
+
+    Date: string;
+
+    Code: string;
+
+    Buy: string;
+
+    Sell: string;
+
+
 }
-
-

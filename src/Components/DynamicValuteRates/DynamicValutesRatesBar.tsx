@@ -52,7 +52,7 @@ const DynamicValutesRatesBar = (props: Props) => {
 
       if(currentDate != undefined) setFromdate(currentDate);
 
-      console.log(currentDate);
+      //console.log(currentDate);
     }
 
     const ToDateChanged =(source)=>{
@@ -60,12 +60,12 @@ const DynamicValutesRatesBar = (props: Props) => {
       const  currentDate =  ParseDateString(source.target.value);
 
       if(currentDate != undefined) setTodate(currentDate);
-      console.log(currentDate);
+      //console.log(currentDate);
     }
 
     const ValuteChoosen =(source)=>{
 
-      console.log(source.target.value);
+      //console.log(source.target.value);
 
       if(source.target.value != undefined){
 
@@ -73,7 +73,7 @@ const DynamicValutesRatesBar = (props: Props) => {
 
         if(newId != undefined) setValuteID(newId);
 
-        console.log(newId);
+        //console.log(newId);
       } 
     }
 
@@ -134,7 +134,7 @@ const DynamicValutesRatesBar = (props: Props) => {
       }
 
       setDynamicValutes(newRes);
-      console.log(newRes);
+      //console.log(newRes);
     }
 
 

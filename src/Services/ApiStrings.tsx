@@ -47,6 +47,13 @@ export function DynamicValutesURL(id: string, datfrom:Date, datto:Date,){
 
 }
 
+export function DynamicMetalsURL(datfrom:Date, datto:Date,){
+
+    
+    return "https://www.cbr.ru/scripts/xml_metall.asp?date_req1=" +GetDateString(datfrom)+"&date_req2=" + GetDateString(datto);
+
+}
+
 export function GetDateString(source:Date){
     return ControlNumberLendth(source.getDate().toFixed(0), 2) + "/" + ControlNumberLendth((source.getMonth()+1).toFixed(0), 2) + "/" + ControlNumberLendth(source.getFullYear().toFixed(0), 4);
 }

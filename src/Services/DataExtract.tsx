@@ -1,4 +1,4 @@
-import { ValuteDictionaryEntity, ValuteRateEntity, XmlEntity, DynamicValuteRate } from "../Models/ApiEntities";
+import { ValuteDictionaryEntity, ValuteRateEntity, XmlEntity, DynamicValuteRate, DynamicMetalRate } from "../Models/ApiEntities";
 
 //возвращаем экземпляр ValuteDictionaryEntity
 export function ParseValuteDictionaryEntity(source: XmlEntity){
@@ -124,6 +124,50 @@ export function ParseDynamicValuteRateEntity(source: XmlEntity){
    }
 
    let result: DynamicValuteRate = {Date: objDate, Id: objID, Nominal: nominal, Value: value, ValuePUnit: valueNunit }
+  
+
+   return result;
+
+
+}
+
+
+
+export function ParseDynamicMetallRateEntity(source: XmlEntity){
+
+    //console.log(source);
+
+   if(source.name != "Record") return undefined;
+
+   //if(source.attributes["Id"] == null ||source.attributes["Id"] == undefined)  return undefined;
+
+   let objCode = source.attributes["Code"];
+   let objDate = source.attributes["Date"];
+
+   //console.log(source.attributes["ID"]);
+
+   
+   
+   let buy: string = "";
+   let sell: string = "";
+   
+
+   
+
+   for (let index = 0; index < source.children.length; index++) {
+
+    //console.log(source.children[index]);
+
+
+    
+    
+    if(source.children[index].name == "Buy"){ buy = source.children[index].value; }
+    if(source.children[index].name == "Sell"){ sell = source.children[index].value; }
+   
+    
+   }
+
+   let result: DynamicMetalRate = {Date: objDate, Code: objCode, Buy: buy, Sell: sell}
   
 
    return result;

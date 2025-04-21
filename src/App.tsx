@@ -116,10 +116,10 @@ function App() {
 
       
 
-    <DailyvalutesBar/>
+    {/* <DailyvalutesBar/> */}
 
       
-      {/* <DynamicValutesRatesBar Valutes={DictionaryValutes}/> */}
+      <DynamicValutesRatesBar Valutes={DictionaryValutes}/>
 
     
     </>
