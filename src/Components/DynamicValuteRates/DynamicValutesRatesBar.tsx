@@ -115,7 +115,8 @@ const DynamicValutesRatesBar = (props: Props) => {
     const GetDynamicValutes = async ()=>{
 
       let xml : XmlEntity| null = await FetchXMLDoc(DynamicValutesURL(ValuteID, Fromdate ?? new Date(), Todate?? new Date()));
-
+      
+      console.log(xml);
       
       let newRes: DynamicValuteRate[] = [];
 

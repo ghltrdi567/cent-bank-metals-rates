@@ -169,7 +169,7 @@ export function ParseDynamicMetallRateEntity(source: XmlEntity){
 
    let result: DynamicMetalRate = {Date: objDate, Code: objCode, Buy: buy, Sell: sell}
   
-
+//console.log(result);
    return result;
 
 

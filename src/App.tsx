@@ -13,6 +13,7 @@ import DatePicker from './Components/DatePicker'
 import { ParseDateString } from './Services/Datavalidation'
 import DailyvalutesBar from './Components/DailyValutes/DailyvalutesBar'
 import DynamicValutesRatesBar from './Components/DynamicValuteRates/DynamicValutesRatesBar'
+import DynamicMetalsBar from './Components/DynamicMetals/DynamicMetalsBar'
 
 function App() {
   
@@ -119,7 +120,9 @@ function App() {
     {/* <DailyvalutesBar/> */}
 
       
-      <DynamicValutesRatesBar Valutes={DictionaryValutes}/>
+      {/* <DynamicValutesRatesBar Valutes={DictionaryValutes}/> */}
+
+      <DynamicMetalsBar/>
 
     
     </>

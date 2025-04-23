@@ -137,3 +137,18 @@ export interface DynamicMetalRate{
 
 
 }
+
+export interface DynamicMetalsratesToDate{
+
+    Date: string;
+
+    Gold: DynamicMetalRate | undefined;
+
+    Silver: DynamicMetalRate | undefined;
+
+    Platinum: DynamicMetalRate | undefined;
+
+    Palladium: DynamicMetalRate | undefined;
+
+
+}
