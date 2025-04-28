@@ -5,6 +5,8 @@ import DatePicker from '../DatePicker';
 import { ParseDateString } from '../../Services/Datavalidation';
 import { DynamicMetalsURL } from '../../Services/ApiStrings';
 import { ParseDynamicMetallRateEntity } from '../../Services/DataExtract';
+import CheckBoxDynamicCaption from '../CheckBoxDynamicCaption';
+import DynamicMetalsTable from './DynamicMetalsTable';
 
 type Props = {}
 
@@ -149,14 +151,14 @@ const DynamicMetalsBar = (props: Props) => {
         //console.log(currentDate);
     }
 
-
+    
 
   return (
     <>
 
     <Container>
 
-   <Row className='mt-3'>
+    <Row className='mt-3'>
 
 
      <Col sm>
@@ -177,7 +179,7 @@ const DynamicMetalsBar = (props: Props) => {
    <Row className='mt-3'>
 
    <Col sm>
-   
+   <DynamicMetalsTable Metals={DynamicMetals}/>
      </Col>
 
 
