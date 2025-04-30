@@ -152,3 +152,28 @@ export interface DynamicMetalsratesToDate{
 
 
 }
+
+
+export interface InvestCoinDictionaryEntity{
+
+    Id: string;
+    Releasedate: string;
+    Name: string;
+    Nominal: string;
+    Metall: string;
+
+
+}
+
+export interface InvestCoinRateToDate{
+
+    CoinId: string;
+    Date: string;
+    Price: string;
+    Metall: string;
+    Weight: string;
+
+}
+
+
+
