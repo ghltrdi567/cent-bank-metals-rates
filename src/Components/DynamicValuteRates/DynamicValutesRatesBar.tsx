@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { ValuteDictionaryData } from '../ValuteDictionary/ValuteDictionaryTabs';
 import DatePicker from '../DatePicker';
-import { ParseDateString } from '../../Services/Datavalidation';
+import { ParseDateString } from '../../Services/Datavalidation.tsx';
 import Select from '../Select';
 import { Col, Container, InputGroup, Row } from 'react-bootstrap';
 import { DynamicValuteRate, FetchXMLDoc, XmlEntity } from '../../Models/ApiEntities';
