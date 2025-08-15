@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { DynamicMetalRate, DynamicMetalsratesToDate, FetchXMLDoc, XmlEntity } from '../../Models/ApiEntities';
 import { Col, Container, Row } from 'react-bootstrap';
 import DatePicker from '../DatePicker';
-import { ParseDateString } from '../../Services/Datavalidation';
+import { ParseDateString } from '../../Services/Datavalidation.tsx';
 import { DynamicMetalsURL } from '../../Services/ApiStrings';
 import { ParseDynamicMetallRateEntity } from '../../Services/DataExtract';
 import CheckBoxDynamicCaption from '../CheckBoxDynamicCaption';
